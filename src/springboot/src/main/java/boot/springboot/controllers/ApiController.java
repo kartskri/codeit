@@ -9,7 +9,7 @@ public class ApiController {
 
     @RequestMapping(path="/" )
     public String ok() {
-        return "Ok";
+        return "Ok23";
     }
 
 }
