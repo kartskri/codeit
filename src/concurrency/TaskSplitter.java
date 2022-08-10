@@ -31,7 +31,8 @@ public class TaskSplitter implements Callable<String> {
         List<Future<String>> resLst = new ArrayList<>();
 
         for (int i = 0; i < 16; i++) {
-            resLst.add(executorService.submit(new TaskSplitter("param" + (i + 1))));
+            TaskSplitter obj = new TaskSplitter("param" + (i + 1));
+            resLst.add(executorService.submit(obj));
         }
 
         try {
